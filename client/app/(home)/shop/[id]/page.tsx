@@ -95,7 +95,7 @@ export default function ProductDetail() {
       </div>
 
       {/* Reviews Section */}
-      <ReviewsSection productId={product._id} rating={product.rating.rate} reviewCount={product.rating.count} />
+      <ReviewsSection />
 
       {/* Recommended Products */}
       <RecommendedProducts />
