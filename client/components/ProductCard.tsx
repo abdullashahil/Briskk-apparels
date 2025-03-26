@@ -76,7 +76,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, image, ratin
           >
             <button 
               onClick={handleAddToCart}
-              className="w-full text-white py-3 text-sm font-medium hover:bg-black transition-colors"
+              className="w-full text-white py-3 text-sm font-medium hover:bg-black transition-colors cursor-pointer"
             >
               ADD TO CART
             </button>
