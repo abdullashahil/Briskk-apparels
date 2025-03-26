@@ -15,6 +15,7 @@ interface Product {
     rate: number
     count: number
   }
+  category: string // Added category
 }
 
 export default function RecommendedProducts() {
@@ -88,7 +89,7 @@ export default function RecommendedProducts() {
                 price={product.price}
                 image={product.images[0]}
                 rating={product.rating.rate}
-                category={product.category}
+                category={product.category} // Now valid since Product includes category
               />
             </motion.div>
           ))}
@@ -104,7 +105,7 @@ interface ProductCardProps {
   price: number
   image: string
   rating: number
-  category: string
+  category?: string // Made optional if not used in the component
 }
 
 function ProductCard({ id, name, price, image, rating }: ProductCardProps) {
@@ -129,4 +130,3 @@ function ProductCard({ id, name, price, image, rating }: ProductCardProps) {
     </Link>
   )
 }
-
