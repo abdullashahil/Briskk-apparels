@@ -5,12 +5,7 @@ import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import StarRating from "./star-rating"
-
-interface ReviewsSectionProps {
-  productId: string
-  rating: number
-  reviewCount: number
-}
+import Image from "next/image"
 
 interface Review {
   id: string
@@ -155,7 +150,7 @@ function ReviewItem({ review }: { review: Review }) {
     <div className="border-b border-gray-200 pb-8">
       <div className="flex items-start">
         <div className="mr-4 w-10 h-10 overflow-hidden">
-          <img
+          <Image
             src={avatarUrl || "/placeholder.svg"}
             alt={`${review.name}'s avatar`}
             className="w-full h-full object-cover"
