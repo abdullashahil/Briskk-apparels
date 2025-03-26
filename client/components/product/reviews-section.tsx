@@ -144,15 +144,17 @@ export default function ReviewsSection() {
 
 function ReviewItem({ review }: { review: Review }) {
   // Generate a consistent avatar URL based on the reviewer's name
-  const avatarUrl = `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(review.name)}&backgroundColor=5c564a&textColor=ffffff`
+  const avatarUrl = `https://api.dicebear.com/7.x/initials/png?seed=${encodeURIComponent(review.name)}&backgroundColor=5c564a&textColor=ffffff`
 
   return (
     <div className="border-b border-gray-200 pb-8">
       <div className="flex items-start">
         <div className="mr-4 w-10 h-10 overflow-hidden">
           <Image
-            src={avatarUrl || "/placeholder.svg"}
+            src={avatarUrl || "/no-profile.png"}
             alt={`${review.name}'s avatar`}
+            width={40} 
+            height={40}
             className="w-full h-full object-cover"
           />
         </div>

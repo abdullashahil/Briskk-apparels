@@ -185,7 +185,7 @@ const ProductsGrid = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {[...Array(4)].map((_, index) => (
             <div key={index} className="animate-pulse">
-              <div className="bg-gray-200 aspect-square mb-3"></div>
+              <div className="bg-gray-200 aspect-[3/4] mb-3"></div>
               <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
               <div className="h-4 bg-gray-200 rounded w-1/4"></div>
             </div>

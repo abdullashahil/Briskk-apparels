@@ -57,8 +57,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
           )
         : [...prevCart, { ...product, quantity }]
       
-      // Show success toast
-      toast.success(`${quantity} ${quantity > 1 ? 'items' : 'item'} of ${product.name} added to cart`)
+      // Use product ID in toast ID to prevent duplicates
+      toast.success(`${quantity} ${quantity > 1 ? 'items' : 'item'} of ${product.name.substring(0, 20)}${product.name.length > 20 ? '..' : ''} added to cart`, {
+        id: `add-to-cart-${product.id}`
+      })
       
       return newCart
     })
