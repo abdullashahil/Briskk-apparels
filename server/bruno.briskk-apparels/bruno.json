@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "bruno.briskk-apparels",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

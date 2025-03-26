@@ -1,18 +1,16 @@
 import express from "express";
-import Product from "../models/Product.js";
+import { 
+    getAllProducts, 
+    getProductById, 
+    getProductsByCategory,
+    getRecommendedProducts 
+} from "../controllers/productController.js";
 
 const router = express.Router();
 
-// Get all products
-router.get("/", async (req, res) => {
-    const products = await Product.find();
-    res.json(products);
-});
-
-// Get single product
-router.get("/:id", async (req, res) => {
-    const product = await Product.findById(req.params.id);
-    res.json(product);
-});
+router.get("/", getAllProducts);
+router.get("/recommended", getRecommendedProducts);
+router.get("/:id", getProductById);
+router.get("/category/:category", getProductsByCategory);
 
 export default router;
