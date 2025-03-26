@@ -29,7 +29,7 @@ export default function ProductDetail() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/api/products/${id}`)
+        const response = await fetch(`https://briskk-server.vercel.app/api/products/${id}`)
         const data = await response.json()
         setProduct(data)
       } catch (error) {

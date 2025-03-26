@@ -36,7 +36,7 @@ const ProductsGrid = () => {
     const fetchProducts = async () => {
       setIsLoading(true)
       try {
-        const response = await fetch("http://localhost:4000/api/products")
+        const response = await fetch("https://briskk-server.vercel.app/api/products")
         const data: Product[] = await response.json()
         setAllProducts(data)
         setFilteredProducts(data) // Initialize with all products

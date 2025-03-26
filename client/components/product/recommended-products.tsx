@@ -25,7 +25,7 @@ export default function RecommendedProducts() {
   useEffect(() => {
     const fetchRecommendedProducts = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/products/recommended")
+        const response = await fetch("https://briskk-server.vercel.app/api/products/recommended")
         const data = await response.json()
         setRecommendedProducts(data)
       } catch (error) {

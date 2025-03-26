@@ -2,7 +2,7 @@ import { Product } from "../types/Product";
 
 export const fetchProductById = async (id: string): Promise<Product> => {
   try {
-    const response = await fetch(`http://localhost:4000/api/products/${id}`);
+    const response = await fetch(`https://briskk-server.vercel.app/api/products/${id}`);
     
     if (!response.ok) {
       throw new Error(`Failed to fetch product: ${response.statusText}`);
