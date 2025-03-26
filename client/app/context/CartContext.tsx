@@ -58,11 +58,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         : [...prevCart, { ...product, quantity }]
       
       // Show success toast
-      toast({
-        title: "Added to cart",
-        description: `${quantity} ${quantity > 1 ? 'items' : 'item'} of ${product.name} added to cart`,
-        variant: "default",
-      })
+      toast.success(`${quantity} ${quantity > 1 ? 'items' : 'item'} of ${product.name} added to cart`)
       
       return newCart
     })
@@ -74,11 +70,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const newCart = prevCart.filter(item => item.id !== productId)
       
       if (removedItem) {
-        toast({
-          title: "Removed from cart",
-          description: `${removedItem.name} removed from cart`,
-          variant: "destructive",
-        })
+        toast.error(`${removedItem.name} removed from cart`)
       }
       
       return newCart
