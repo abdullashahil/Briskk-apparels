@@ -15,7 +15,6 @@ interface Product {
     rate: number
     count: number
   }
-  category: string
 }
 
 export default function RecommendedProducts() {
@@ -108,7 +107,7 @@ interface ProductCardProps {
   category: string
 }
 
-function ProductCard({ id, name, price, image, rating, category }: ProductCardProps) {
+function ProductCard({ id, name, price, image, rating }: ProductCardProps) {
   return (
     <Link href={`/shop/${id}`} className="group cursor-pointer">
       <div className="aspect-square bg-gray-50 relative overflow-hidden mb-3">

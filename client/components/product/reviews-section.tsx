@@ -69,7 +69,7 @@ const mockReviews: Review[] = [
   },
 ]
 
-export default function ReviewsSection({ productId, rating, reviewCount }: ReviewsSectionProps) {
+export default function ReviewsSection() {
   const [sortBy, setSortBy] = useState("recent")
 
   // Calculate average rating from mock reviews
